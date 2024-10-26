@@ -9,7 +9,7 @@ Cyberpatriot script for windows
   - be careful with the bad files remover
       - it can delete stuff that you dont want to delete just yet
   - Installing git is required if you are doing everything in a tty
-
+  - Also careful of chainging the users passwords...XD
 
 
 
@@ -18,11 +18,13 @@ Cyberpatriot script for windows
 
 
 - TODO
-    - Fix the firewall
-        - Its not working ... I think
-    - Fix anything else not working ... XD
-    - Make .md's for each script in there
-    - Make dir's for each script in there
+    - Need to make .md's
+    - Make sure everything is works
+ 
+- Completed
+    - Dirs
+    - Firewall
+    - And other misc.
 
 
 
