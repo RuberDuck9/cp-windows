@@ -220,6 +220,13 @@ if %ERRORLEVEL% equ 1 (
     reg ADD HKLM\SYSTEM\CurrentControlSet\Control\CrashControl /v CrashDumpEnabled /t REG_DWORD /d 0 /f
     echo Disable autoruns
     reg ADD HKCU\SYSTEM\CurrentControlSet\Services\CDROM /v AutoRun /t REG_DWORD /d 1 /f
+    reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 2 /f
+    echo WARNING!!!!!
+    echo WARNING!!!!!
+    echo WARNING!!!!!
+    echo WARNING!!!!!
+    echo PLS READBELOW CAN MESS UP SCRIPT!!!!!!!!!!!
+    echo Configure User Account control: !!!!! To enhance or reduce UAC prompts, add more settings related to UAC 
     echo *** Finished                                                                     ***
     echo ------------------------------------------------------------------------------------
     echo:
@@ -504,6 +511,21 @@ if %ERRORLEVEL% equ 1 (
         echo ------------------------------------------------------------------------------------
     )
 )
+
+Rem Flushing Dns
+    echo Do you want to flush DNS?
+    choice /c yn /m "Press Y for Yes, N for No: "
+    if %ERRORLEVEL% equ 1 (
+        echo Flushing DNS...
+        ipconfig /flushdns
+        echo *** Finished
+        pause
+    )
+    else if %ERRORLEVEL% equ 2 (
+        echo Canceling...
+        pause
+    )
+    goto:eof
 
 echo ------------------------------------------------------------------------------------
 echo *** End of script                                                                ***
