@@ -33,6 +33,7 @@ Cyberpatriot script for windows
 
 
 
-Thx to who ever I pulled this from: 
-https://github.com/xFaraday/EzScript/tree/master
-https://github.com/AwSkies/CPWindowsScripts
+ - Thx to who ever I pulled this from: 
+   - https://github.com/xFaraday/EzScript/tree/master
+   - https://github.com/AwSkies/CPWindowsScripts
+   - https://github.com/BaiqingL/CyberPatriotScripts
