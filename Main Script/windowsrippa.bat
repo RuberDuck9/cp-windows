@@ -52,6 +52,7 @@ if ERRORLEVEL 5 goto Five
 if ERRORLEVEL 6 goto Six
 if ERRORLEVEL 7 goto Seven
 
+pause
 
 :One
 REM Automation is like from alot of repos...
@@ -413,12 +414,13 @@ if %ERRORLEVEL% equ 1 (
     echo ------------------------------------------------------------------------------------
     echo:
 )
-
+pause
 goto MENU  
 :Two
 REM Windows auomatic updates
 echo "ENABLING AUTO-UPDATES"
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" /v AUOptions /t REG_DWORD /d 3 /f
+pause
 goto MENU
 
 :Three
@@ -475,6 +477,7 @@ dism /online /disable-feature /featurename:IIS-FTPExtensibility
 dism /online /disable-feature /featurename:TFTP
 dism /online /disable-feature /featurename:TelnetClient
 dism /online /disable-feature /featurename:TelnetServer
+pause
 goto MENU
 
 :Four
@@ -533,7 +536,8 @@ if %ERRORLEVEL% equ 1 (
                 )
             )
         )
-        echo *** Finished                                                                     ***
+        echo *** Finished    
+        pause                                                                 
         goto MENU
     )
 )
@@ -542,16 +546,19 @@ if %ERRORLEVEL% equ 1 (
 REM URL for Google Chrome Installer
     set "chrome_url=https://dl.google.com/chrome/install/latest/chrome_installer.exe"
     set "chrome_installer=chrome_installer.exe"
+    pause
     goto MENU
 
 :Six
 REM URL for Firefox Installer
     set "firefox_url=https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
     set "firefox_installer=%downloads_folder%\firefox_installer.exe"
+    pause
     goto MENU
 
 :Seven
     REM URL for Chromium Installer
     set "chromium_url=https://download-chromium.appspot.com/dl/Win?type=snapshots"
     set "chromium_installer=%downloads_folder%\chromium_installer.exe"
+    pause
     goto MENU
